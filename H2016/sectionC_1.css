@@ -1,0 +1,5 @@
+.company { /* .company is the class selector. #elementID is the ID selector*/
+	font-family: serif;
+	font-weight: bold;
+	font-size: 1.25em;
+}

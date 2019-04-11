@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Section C, Q6</title>
+</head>
+<body>
+	<canvas id="canvas1" width="150" height="150" style="border: 1px solid #d3d3d3">
+		Your browser does not support canvas. <!-- This is the fallback text-->
+	</canvas>
+
+	<script type="text/javascript">
+		const canvas = document.getElementById('canvas1');
+      	const ctx = canvas.getContext('2d');
+
+      	// shorter syntax:
+      	var width = ctx.canvas.width;
+      	var height = ctx.canvas.height;
+
+      	// Drawing the borders:
+      	ctx.lineWidth = 5;
+      	ctx.strokeStyle="rgba(0,0,255, 1)";
+      	ctx.strokeRect(0, 0, width, height);
+
+      	// Drawing the circle: 
+      	ctx.beginPath();
+      	ctx.arc(
+      		width / 2, 	// x coordinate of center
+      		height / 2, 	// y coordinate of center
+      		height / 2, 	// radius
+      		0, 						// starting angle
+      		2*Math.PI, 				// ending angle
+      		true);					// true = anti-clockwise
+      	ctx.stroke();
+
+		// Drawing the cross:
+		ctx.beginPath();
+		ctx.moveTo(0, height/2);
+		ctx.lineTo(width, height/2);		// horizontal line
+		ctx.moveTo(width/2, 0);
+		ctx.lineTo(width/2, height)			// vertical line
+		ctx.stroke()
+
+	</script>
+
+</body>
+</html>

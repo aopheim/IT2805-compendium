@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Section C, Q6, canvas</title>
+</head>
+<body>
+  <canvas id="myCanvas" width="300" height="300" style="border: 1px solid #d3d3d3;">
+  </canvas>
+  <script>
+// JavaScript:
+var canvas = document.getElementById('myCanvas');
+var ctx = canvas.getContext('2d');
+
+var width = ctx.canvas.width;
+var height = ctx.canvas.height;
+
+// Drawing the circular face:
+ctx.beginPath()
+//ctx.moveTo(width / 2, height / 2);
+ctx.arc(width / 2, height / 2, 0.8 * height / 2, 0, 2 * Math.PI, true);
+ctx.stroke();
+
+// Drawing mouth:
+//ctx.moveTo(width / 2, height / 2)
+ctx.beginPath()
+ctx.arc(width / 2, height / 2, 0.5 * height / 2, Math.PI, 2 * Math.PI, true);
+ctx.stroke();
+
+// Drawing eyes:
+// Left:
+ctx.beginPath()
+ctx.arc(0.4 * width, 0.4 * height, 0.05 * height / 2, 0, 2 * Math.PI, true);
+ctx.stroke();
+// Right:
+ctx.beginPath()
+ctx.arc(0.6 * width, 0.4 * height, 0.05 * height / 2, 0, 2 * Math.PI, true);
+ctx.stroke();
+
+
+  </script>
+</head>

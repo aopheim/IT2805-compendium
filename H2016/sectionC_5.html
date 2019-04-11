@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Section C, Q5</title>
+</head>
+<body>
+	<p>Click the button to loop through a block of code as long as i is less than 10.</p>
+
+	<button onclick="myFunction()">Try it</button>
+
+	<p id="demo"></p>
+
+	<script type="text/javascript">
+		function myFunction() {
+			var text = '';
+			var i = 0;
+			while(i < 10) {
+				text += '<br>The number is ' + i;
+				i++;
+			}
+			p = document.getElementById('demo');
+			p.innerHTML = text;
+		}
+	</script>
+</body>
+</html>
